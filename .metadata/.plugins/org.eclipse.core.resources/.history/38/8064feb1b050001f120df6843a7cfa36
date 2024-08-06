@@ -1,0 +1,17 @@
+package kr.co.softsoldesk.DAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.co.softsoldesk.beans.testBean;
+import kr.co.softsoldesk.mapper.testMapper;
+
+public class testDAO {
+	
+	@Autowired
+	testMapper testMapper;
+	
+	public void getGoodsBean(testBean testBean) {
+		testMapper.getGoodsBean(testBean);
+	}
+
+}

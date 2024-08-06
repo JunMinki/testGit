@@ -1,0 +1,10 @@
+package kr.co.softsoldesk.mapper;
+
+import org.apache.ibatis.annotations.Select;
+
+public interface testMapper {
+	
+	@Select ("select goods_idx, goods_Name, goods_Price, goods_Store "
+			+ "from goods_table ")
+
+}

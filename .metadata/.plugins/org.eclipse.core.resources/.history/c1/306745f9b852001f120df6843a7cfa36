@@ -1,0 +1,17 @@
+package kr.co.softsoldesk.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.co.softsoldesk.DAO.testDAO;
+import kr.co.softsoldesk.beans.testBean;
+
+public class testService {
+	
+	@Autowired
+	testDAO testDAO;
+	
+	public testBean getGoodsBean(int goods_idx) {
+		return testDAO.getGoodsBean(goods_idx);
+	}
+
+}

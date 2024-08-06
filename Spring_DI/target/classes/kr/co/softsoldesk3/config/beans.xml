@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="bean_init" default-destroy-method="bean_destroy">
+
+	<bean id="t1" class="kr.co.softsoldesk3.beans.TestBean1" lazy-init="true" init-method="bean_init" destroy-method="bean_destory" />
+	<!-- init-method: 객체 생성 시 수행되는 메서드 -->
+	<!-- destory-method: 객체 소멸 시 수행되는 메서드 -->
+	
+	<bean id="t2" class="kr.co.softsoldesk3.beans.TestBean2" lazy-init="false" />	
+	<!-- init-method, destroy-method가 설정되어 있지 않다면 default로 설정한 메서드가 호출 -->
+	
+</beans>

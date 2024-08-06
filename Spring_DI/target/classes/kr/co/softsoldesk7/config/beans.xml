@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="t1" class="kr.co.softsoldesk7.beans.TestBean">
+		<!-- #1 제네릭이 String인 리스트 -->
+		<property name="list1"><!-- set 메서드와 같은 역할을 함 -->
+			<list>
+				<value type="java.lang.String">문자열1</value>
+				<value type="java.lang.String">문자열2</value>
+				<value type="java.lang.String">문자열3</value>
+			</list>
+		</property>
+
+		<!-- #2 제네릭이 Integer인 리스트 -->
+		<property name="list2">
+			<list>
+				<value type="int">100</value>
+				<value type="int">200</value>
+				<value type="int">300</value>
+			</list>
+		</property>
+
+		<!-- #3 제네릭이 DataBean인 리스트 -->
+		<property name="list3">
+			<list>
+				<bean class="kr.co.softsoldesk7.beans.DataBean" />
+				<bean class="kr.co.softsoldesk7.beans.DataBean" />
+				<ref bean="data_beans" />
+				<ref bean="data_beans" />
+			</list>
+		</property>
+		
+		<!-- #1 제네릭이 String인 Set -->
+		<property name="set1"><!-- set 메서드와 같은 역할을 함 -->
+			<set>
+				<value type="java.lang.String">문자열1</value>
+				<value type="java.lang.String">문자열2</value>
+				<value type="java.lang.String">문자열3</value>
+				<value type="java.lang.String">문자열3</value>
+			</set>
+		</property>
+
+		<!-- #2 제네릭이 Integer인 Set -->
+		<property name="set2">
+			<set>
+				<value type="int">100</value>
+				<value type="int">200</value>
+				<value type="int">300</value>
+			</set>
+		</property>
+
+		<!-- #3 제네릭이 DataBean인 Set -->
+		<property name="set3">
+			<set>
+				<bean class="kr.co.softsoldesk7.beans.DataBean" />
+				<bean class="kr.co.softsoldesk7.beans.DataBean" />
+				<ref bean="data_beans" />
+				<ref bean="data_beans" />
+			</set>
+		</property>
+		
+		<property name="map1">
+			<map>
+				<entry key="a1" value="문자열" value-type="java.lang.String" />
+				<entry key="a2" value="100" value-type="java.lang.int" />
+				<entry key="a3" >
+					<bean class="kr.co.softsoldesk7.beans.DataBean" />
+				</entry>
+				<entry key="a4" value-ref="data_bean" />
+				<entry key="a5">
+					<list>
+						<value>문자열1</value>
+						<value>문자열1</value>
+						<value>문자열1</value>
+					</list>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="data_beans" class="kr.co.softsoldesk7.beans.DataBean" scope="prototype"/>
+</beans>

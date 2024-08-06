@@ -1,0 +1,4 @@
+path.upload = /Users/minki/workspace-sts-3.9.18.RELEASE/BoardProject/src/main/webapp/WEB-INF/resources/upload
+
+page.listcne = 10
+page.paginationcnt = 10

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring_FormElement1"/>
+<aop-project name="Spring_Interceptor"/>
+<aop-project name="Spring_AOP1"/>
+<aop-project name="Spring_ApplicationScope"/>
+<aop-project name="Spring_JDBC"/>
+<aop-project name="Spring_FormCustomTag"/>
+<aop-project name="Spring_ApplicationScopeBean"/>
+<aop-project name="Spring_CommandObject"/>
+<aop-project name="Spring_SessionScopeBean"/>
+<aop-project name="Spring_Exception"/>
+<aop-project name="SpringBasic"/>
+<aop-project name="Spring_SessionScope"/>
+<aop-project name="Spring_ViewResolver"/>
+<aop-project name="Spring_Validation"/>
+<aop-project name="Spring_FormElement2"/>
+<aop-project name="Spring_DI"/>
+<aop-project name="Spring_Cookie"/>
+<aop-project name="Spring_RequestScopeBean"/>
+<aop-project name="Spring_MyBatis2"/>
+<aop-project name="Spring_RequestScope"/>
+<aop-project name="Spring_Setting"/>
+<aop-project name="Spring_GetParameterObject"/>
+<aop-project name="Spring_RedirectForward"/>
+</aop-reference-model>

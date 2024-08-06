@@ -1,0 +1,26 @@
+package kr.co.softsoldesk.beans;
+
+public class PageBean {
+	
+	private int min;//최소 페이지 번호
+	private int max;//최대 페이지 번호
+	private int prevPage;//이전버튼의 페이지 번호
+	private int nextPage;//다음버튼의 페이지 번호
+	private int pageCnt;//현재 페이지 번호
+	
+	public int getMin() {
+		return min;
+	}
+	public int getMax() {
+		return max;
+	}
+	public int getPrevPage() {
+		return prevPage;
+	}
+	public int getNextPage() {
+		return nextPage;
+	}
+	public int getPageCnt() {
+		return pageCnt;
+	}
+}

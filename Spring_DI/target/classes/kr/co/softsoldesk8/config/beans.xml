@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- #1 setter를 통한 주입 -->
+	<bean id="obj1" class="kr.co.softsoldesk8.beans.TestBean1">
+		<property name="data1" ref="data_bean1" />
+		<property name="data2" ref="data_bean1" />
+	</bean>
+	
+	<bean id="data_bean1" class="kr.co.softsoldesk8.beans.DataBean1" scope="prototype" />
+	
+	<!-- #2 byName을 통한 자동주입 -->
+	<bean id="obj2" class="kr.co.softsoldesk8.beans.TestBean1" autowire="byName" />
+	<bean id="data1" class="kr.co.softsoldesk8.beans.DataBean1" />
+	<bean id="data2" class="kr.co.softsoldesk8.beans.DataBean1" />
+	
+	<!-- #3 byType을 통한 자동주입 -->
+	<!-- <bean id="obj3" class="kr.co.softsoldesk8.beans.TestBean1" autowire="byType" />
+		 똑같은 타입의 bean이 많아지면 터져버림
+		 why? -> 뭘 가져와야 할 지 몰라서 "아 몰랑~" 하고 터짐
+		 그래서 byType은 잘 안씀
+	 -->
+	 
+	 <!-- #4 생성자를 통한 주입 -->
+	 <bean id="obj4" class="kr.co.softsoldesk8.beans.TestBean2" >
+	 	<constructor-arg ref="data_bean1" index="0" />
+	 	<constructor-arg ref="data_bean2" index="1" />
+	 </bean>
+	 <bean id="data_bean2" class="kr.co.softsoldesk8.beans.DataBean2" scope="prototype" />
+	 
+	 <!-- #5 생성자 autoWire -->
+	 <bean id="obj5" class="kr.co.softsoldesk8.beans.TestBean2" autowire="constructor" />
+	 
+	 <!-- #6 생성자 autoWire -->
+	 <bean id="obj6" class="kr.co.softsoldesk8.beans.TestBean2" autowire="constructor" >
+	 	<constructor-arg value="200" index="0" type="int" />
+	 	<constructor-arg value="문자열" index="1" type="java.lang.String" />
+	 </bean>
+	 
+	 
+</beans>

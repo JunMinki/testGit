@@ -1,0 +1,25 @@
+package kr.co.softsoldesk.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.co.softsoldesk.service.testService;
+
+@Controller
+@RequestMapping("/board")
+public class testController {
+	
+	@Autowired
+	testService testService;
+	
+	@GetMapping("/test")
+	private String test(@ModelAttribute("goods_idx") int goods_idx, Model model) {
+		
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package kr.co.softsoldesk.beans;
+
+public class PageBean {
+	
+	private int min;
+	private int max;
+	
+}

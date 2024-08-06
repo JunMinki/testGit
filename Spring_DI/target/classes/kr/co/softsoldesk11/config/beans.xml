@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!-- 생성자를 통한 주입 -->
+   <bean id="xml1" class="kr.co.softsoldesk11.beans.TestBean1" lazy-init="true">
+      <constructor-arg value="100" type="int" index="0" />
+      <constructor-arg value="문자열1" type="String" index="1" />
+      <constructor-arg ref="data_bean" index="2" />
+   </bean>
+   <bean id="data_bean" class="kr.co.softsoldesk11.beans.DataBean1" />
+
+   <!-- setter를 통한 주입 -->
+   <bean id="xml2" class="kr.co.softsoldesk11.beans.TestBean1" lazy-init="true" >
+      <property name="data1" value="200" />
+      <property name="data2" value="문자열2" />
+      <property name="data3" ref="data_bean" />
+   </bean>
+   
+   <!-- autoWire="byName"을 통한 주입 -->
+   <bean id="xml3" class="kr.co.softsoldesk11.beans.TestBean2" autowire="byName"/>
+   <bean id="data1" class="kr.co.softsoldesk11.beans.DataBean2" />
+   <bean id="data2" class="kr.co.softsoldesk11.beans.DataBean2" />
+   
+   <!-- autowire="byType"을 통한 주입 -->
+   <bean id="xml4" class="kr.co.softsoldesk11.beans.TestBean3" autowire="byType" />
+   <bean class = "kr.co.softsoldesk11.beans.DataBean3" />
+</beans>
+
+<!--
+property란?
+빈의 속성을 설정할 때 사용
+기본 생성자를 통해 빈을 생성한 후 속성을 설정
+
+constructor-arg란?
+생성자를 통해 빈을 초기화 할때 사용
+생성자를 호출하여 빈을 생성하고 속성을 설정
+ -->

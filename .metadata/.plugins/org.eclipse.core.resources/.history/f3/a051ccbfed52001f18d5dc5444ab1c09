@@ -1,0 +1,27 @@
+package kr.co.softsoldesk.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import kr.co.softsoldesk.beans.ContentBean;
+import kr.co.softsoldesk.service.MainService;
+
+@Controller
+public class MainController {
+	
+	@Autowired
+	private MainService mainService;
+	
+	@GetMapping("/main")
+	private String main() {
+		
+		ArrayList<List<ContentBean>> list = new ArrayList<List<ContentBean>>();
+		
+		return "main";
+	}
+
+}

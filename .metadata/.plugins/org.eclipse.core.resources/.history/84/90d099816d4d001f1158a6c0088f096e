@@ -1,0 +1,29 @@
+package kr.co.softsoldesk.interceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.HandlerInterceptor;
+
+import kr.co.softsoldesk.beans.UserBean;
+
+public class CheckLoginInterceptor implements HandlerInterceptor{
+	
+	//로그인 여부를 판단하는 UserBean
+	private UserBean loginUserBean;
+	
+	public CheckLoginInterceptor(UserBean loginUserBean) {
+		
+		this.loginUserBean = loginUserBean;
+		
+	}
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		return HandlerInterceptor.super.preHandle(request, response, handler);
+	}
+	
+	
+	
+}

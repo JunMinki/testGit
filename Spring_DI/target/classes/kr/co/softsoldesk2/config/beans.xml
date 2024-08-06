@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- #1 -->
+	<bean class="kr.co.softsoldesk2.beans.TestBean1" id="test1" />
+	<!-- xml 로딩 시 자동 객체 생성 -->
+	
+	<!-- #2 -->
+	<bean class="kr.co.softsoldesk2.beans.TestBean1" id="test2" lazy-init="true"/>
+	<!-- lazy-init="true" : getBean 메서드를 호출할 때 객체 생성 -->
+	
+	<!-- #3 -->
+	<bean class="kr.co.softsoldesk2.beans.TestBean1" id="test3" scope="prototype"></bean>
+	<!-- scope=prototype: 싱글톤X, getBean 메서드를 호출할 때 객체 생성 -->
+	
+	<!-- #4 -->
+	<bean class="kr.co.softsoldesk2.beans.TestBean1" />
+	<!-- xml 로딩 시 자동 객체 생성 -->
+	
+</beans>

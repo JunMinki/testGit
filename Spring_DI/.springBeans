@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.18.202109140629-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/java/kr/co/softsoldesk2/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk3/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk4/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk5/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk6/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk7/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk8/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk9/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk10/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk11/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk12/config/beans.xml</config>
+		<config>src/main/java/kr/co/softsoldesk14/config/beans.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
